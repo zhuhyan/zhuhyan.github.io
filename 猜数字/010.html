@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>实现多重循环，猜数游戏3</title>
+  <script type="text/javascript">
+  <!--
+	var num1 = Math.floor(Math.random()*10) ;
+        //console.log("偷偷告诉你，是 "+num1);
+	for(var i=1;i<=6;i++){
+		var guess = prompt("从0到9，猜猜是几？");
+		while( guess>9 || guess<0 || !guess){ //神奇的 NaN !== NaN
+           guess = prompt("您的输入有误，请准确确输入一个数字（0到9）。");
+		   guess = parseInt(guess);
+	    } //实现输错了就永远循环输入
+	  
+	   if (num1===guess){
+		  alert("对了 !" + "\n你的命中率：" +Math.floor((6-i)/6*100)+"%");
+		  break;
+	    }else{
+	      alert("错了 ， 你还有"+(6-i)+"次机会！");
+	    }
+	}//end of for 循环次数
+        if (i===7) {
+         alert("你居然一次都没猜对 !" + "\n你的命中率：0%");
+        }
+  //-->
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

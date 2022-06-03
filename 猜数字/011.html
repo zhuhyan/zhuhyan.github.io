@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style type="text/css">
+   body{margin:0 auto;width:600px;}
+   h1{font-size:3em;text-align:center;}
+   p{font-size:1.5em;}
+   span{color:blue;font-size:2em;}
+   input{font-size:2em;margin:1em;}
+  </style>
+  <title>DOM初步实现UI界面，实现猜数游戏4</title>
+ </head>
+ <body>
+  <p>从0到1000，你心里想好一个数字!<br>并对比回答屏幕显示数字
+  ，我傻傻地试试，逐渐输出你心里这个数！</p>
+  <span id="times">第1次</span><h1 id="num">500</h1>
+  
+  <input id="big" type="button" value="数字大了">
+  <input id="small" type="button" value="数字小了">
+
+    <script type="text/javascript">
+  <!--
+	var num = 500;
+    var times= 1 ;
+	//先实现一个粗略的算法
+	document.querySelector("input#big").onclick = function(){
+	 num = Math.floor( num / 2 );
+	 document.querySelector("h1#num").textContent = num ; 
+	 times ++ ;
+     document.querySelector("span#times").textContent = "第" + times + "次" ; 
+	}
+
+	document.querySelector("input#small").onclick = function(){
+     num = num + Math.floor((1000- num)/2) ;
+	 document.querySelector("h1#num").textContent = num ; 
+	 times ++ ;
+     document.querySelector("span#times").textContent = "第" + times + "次" ; 
+	}
+  //-->
+  </script>
+
+ </body>
+</html>
